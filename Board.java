@@ -23,7 +23,11 @@ public class Board{
 
     public static void main(String[] args){
         Board b = new Board();
-        System.out.println(b);
+        int[][] x = {{1,0}};
+        b.grid[1][0] = new Piece("♙", 1,0,1,false, new int[][]{{1,0}});
+        try{b.grid[1][0].move(1, 0);}
+        catch(Exception err){err.printStackTrace();}
+
     }
 
 }
